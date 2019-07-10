@@ -1,0 +1,19 @@
+note over browser:
+browser first redraw the notes
+and then sends a new note
+defined as follow
+content of the note,
+and date
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: Json response
+note over browser
+With the response that has
+status code 201 of created
+then it proceeds to render 
+the note as follows
+end note
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

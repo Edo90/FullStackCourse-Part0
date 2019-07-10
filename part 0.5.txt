@@ -1,0 +1,36 @@
+browser -> server: Http get: https://fullstack-exampleapp.herokuapp.com/spa
+server -> browser: Get HTML code
+note over server 
+status code of the 
+get request is 200 
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/main.css
+server -> browser: Get CSS code
+note over server 
+status code of the 
+get request is 200 
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/spa.js
+server -> browser: Get JS code
+note over server 
+status code of the 
+get request is 200 
+end note
+note over browser 
+javascript is executed to request 
+the Json data 
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/data.json
+server -> browser: Get Json Data
+note over server 
+status code of the 
+get request is 200 
+end note
+
+note over browser 
+where the browser will redraw 
+the list of notes with a method 
+that is waiting for a status
+200 and readystate of 4 that 
+means done to redraw the list of nodes
+end note

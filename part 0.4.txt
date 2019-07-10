@@ -1,0 +1,45 @@
+note over browser 
+Form Data is send to server
+with new note
+end note
+browser->server: Http post: https://fullstack-exampleapp.herokuapp.com/new_note 
+note over server 
+status code of the 
+post request is 302 
+found
+end note
+browser -> server: Http get: https://fullstack-exampleapp.herokuapp.com/notes
+server -> browser: Get HTML code
+note over server 
+status code of the 
+get request is 200 
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/main.css
+server -> browser: Get CSS code
+note over server 
+status code of the 
+get request is 200 
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/main.js
+server -> browser: Get JS code
+note over server 
+status code of the 
+get request is 200 
+end note
+note over browser 
+javascript is executed to request 
+the Json data 
+xhttp.open("GET", "/data.json", true)
+xhttp.send()
+end note
+browser -> server: https://fullstack-exampleapp.herokuapp.com/data.json
+server -> browser: Get Json Data
+note over server 
+status code of the 
+get request is 200 
+end note
+
+note over browser 
+browser render the notes
+to display
+end note
